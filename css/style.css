@@ -47,52 +47,64 @@ body {
   background-size: cover;
 }
 .event {
-  max-width: 1186px;
+  width: 1186px;
   margin: 0 auto;
-
 }
-.wrapper {
+
+.event__content {
   margin-bottom: 70px;
   background: rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 60px 5px #000;
   padding: 0 100px;
-  background: url("../img/separator.svg") no-repeat center center;
 }
-.wrapper:after {
-  content: "";
-  display: table;
-  clear: both;
+.event__content-title {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: bold;
+  padding: 32px 0;
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: url("../img/separator.svg") no-repeat center center;
 }
 .event__title {
   margin: 0 0 80px 0;
   padding: 0;
   font-size: 45px;
-  line-height: 47px;
-  padding: 30px 0;
+  line-height: 47px;  
+  background: linear-gradient(#df6eff, #8409b2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.event__counter {
-  float: left;
+.event__counter {  
   display: flex;  
   width: 50%; 
+  
+}
+.event__col {
+  border: 1px solid;
+  border-image: linear-gradient(90deg, #570875, #9452aa) 1;
+  padding: 23px 0;
+  width: 107px;
+  margin-right: 62px;  
+    flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.event__col:last-child {
+  margin-right: 0;
 }
 .event__counter-descr {
   font-size: 18px;
   line-height: 24px;
   font-weight: 300;
 }
-.event__place {
-  float: right;
+.event__place {  
   display: flex;
-}
-.event__col {
-  border: 2px solid;
-  border-image: linear-gradient(90deg, #570875, #9452aa) 1;
-  padding: 23px 0;
-  width: 107px;
-  margin-right: 60px;  
-}
-.event__col:last-child {
-  margin-right: 0;
+  flex-wrap: no-wrap;  
 }
 .event__digit {
   font-size: 46px;
@@ -134,4 +146,50 @@ body {
   background: linear-gradient(to top, #ab25d4, #741497);
   text-shadow: 1px 1px 5px #000;
     box-shadow: 0 0 60px 10px #000;
+}
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .event {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .event__counter {
+    width: 100%; 
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  .event__place {
+    width: 100%; 
+    justify-content: space-between;
+  }
+  .flex-container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: none;
+  }
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
 }
