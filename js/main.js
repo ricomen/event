@@ -2,9 +2,10 @@
 var myBox = document.querySelector(".event");
 var myBoxHeight = myBox.offsetHeight;
 
-function boxCenter() {    
-  margTop = (document.documentElement.clientHeight - myBoxHeight)/2;  
-  myBox.style.marginTop = margTop + "px";
+function boxCenter() {
+  if (((document.documentElement.clientHeight - myBox.offsetHeight)/2) > 0) {
+  myBox.style.marginTop = ((document.documentElement.clientHeight - myBox.offsetHeight)/2) + "px";
+  }
 }
 
 window.onload = boxCenter;
