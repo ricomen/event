@@ -1,5 +1,5 @@
 (function() {
-var myBox = document.querySelector(".event");
+var myBox = document.querySelector(".event")
 var myBoxHeight = myBox.offsetHeight;
 
 function boxCenter() {
@@ -7,8 +7,6 @@ function boxCenter() {
   myBox.style.marginTop = ((document.documentElement.clientHeight - myBox.offsetHeight)/2) + "px";
   }
 }
-
-window.onload = boxCenter;
+boxCenter();
 window.onresize = boxCenter;
-
 })();
